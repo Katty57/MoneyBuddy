@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE35302828434EFC003C8D98 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35302728434EFC003C8D98 /* ShopViewController.swift */; };
 		CE35302A284360A2003C8D98 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE353029284360A2003C8D98 /* WelcomeViewController.swift */; };
+		CE35302C28438088003C8D98 /* WelcomeSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35302B28438088003C8D98 /* WelcomeSecondViewController.swift */; };
 		CE6E8CB628421262005B9FDC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E8CB528421262005B9FDC /* RegistrationViewController.swift */; };
 		CE6E8CB8284224C6005B9FDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E8CB7284224C6005B9FDC /* HomeViewController.swift */; };
 		CE6E8CBA284240E3005B9FDC /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E8CB9284240E2005B9FDC /* GoalViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		CE35302728434EFC003C8D98 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		CE353029284360A2003C8D98 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		CE35302B28438088003C8D98 /* WelcomeSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSecondViewController.swift; sourceTree = "<group>"; };
 		CE6E8CB528421262005B9FDC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		CE6E8CB7284224C6005B9FDC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CE6E8CB9284240E2005B9FDC /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				CE6E8CB9284240E2005B9FDC /* GoalViewController.swift */,
 				CE6E8CC12842BD55005B9FDC /* NewTargetViewController.swift */,
 				CE6E8CBB28424385005B9FDC /* ProfileViewController.swift */,
+				CE35302B28438088003C8D98 /* WelcomeSecondViewController.swift */,
 				CE6E8CB528421262005B9FDC /* RegistrationViewController.swift */,
 				CEF78A2A284116C7005906F9 /* Assets.xcassets */,
 				CEF78A2C284116C7005906F9 /* LaunchScreen.storyboard */,
@@ -167,6 +170,7 @@
 				CE6E8CB628421262005B9FDC /* RegistrationViewController.swift in Sources */,
 				CE6E8CBA284240E3005B9FDC /* GoalViewController.swift in Sources */,
 				CEF78A26284116C4005906F9 /* ViewController.swift in Sources */,
+				CE35302C28438088003C8D98 /* WelcomeSecondViewController.swift in Sources */,
 				CEF78A22284116C4005906F9 /* AppDelegate.swift in Sources */,
 				CE6E8CB8284224C6005B9FDC /* HomeViewController.swift in Sources */,
 			);

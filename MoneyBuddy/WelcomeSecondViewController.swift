@@ -1,5 +1,5 @@
 //
-//  WelcomeViewController.swift
+//  WelcomeSecondViewController.swift
 //  MoneyBuddy
 //
 //  Created by  User on 29.05.2022.
@@ -7,15 +7,12 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class WelcomeSecondViewController: UIViewController {
         
         private lazy var welcomeLabel: UILabel = {
             let label = UILabel()
             label.text = """
-                Привет, Друг!
-                Я твой Money Buddy.
-                Я буду твоим
-                путеводителем в мир финансовой грамотности.
+                Introduction speech
                 """
             label.textColor = .black
             label.numberOfLines = 0
@@ -30,50 +27,55 @@ class WelcomeViewController: UIViewController {
             button.setTitle("Далее", for: .normal)
             button.backgroundColor = UIColor(red: 0.133, green: 0.396, blue: 0.024, alpha: 1)
             button.layer.cornerRadius = 25
+            //button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.black.cgColor
+            button.addTarget(self, action: #selector(showViewController(_:)), for: .touchUpInside)
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.addTarget(self, action: #selector(showSecondPage), for: .touchUpInside)
             return button
         }()
     
-    @objc func showSecondPage() {
+    @objc func showViewController(_ sender: UIButton) {
         let vc = ViewController()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: false, completion: nil)
     }
+        
+      //  private lazy var authorizathionLabel: UILabel = {
+      //          let label = UILabel()
+     //           label.text = "Пожалуйста, авторизуйтесь"
+      //          label.textColor = .black
+        //        label.numberOfLines = 0
+          //      label.textAlignment = .center
+            //    label.font = .systemFont(ofSize: 14.0)
+              //  label.translatesAutoresizingMaskIntoConstraints = false
+                //return label
+           // }()
+        
+        override func viewDidLoad() {
+                super.viewDidLoad()
+                
+                view.backgroundColor = .white
+                setUpSubviews()
+                // Do any additional setup after loading the view.
+            }
 
         func setUpSubviews (){
                 view.addSubview(welcomeLabel)
             view.addSubview(nextButton)
-             
+        //        view.addSubview(authorizathionLabel)
+        //        view.addSubview(forgotPasswordButton)
+            
             NSLayoutConstraint.activate([
                 welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 278),
                 welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
                 welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-                nextButton.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 73),
+                //nextButton.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 73),
+                nextButton.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 177),
                 nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 98),
                 nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -98),
+                //nextButton.widthAnchor.constraint(equalToConstant: 180),
                 nextButton.heightAnchor.constraint(equalToConstant: 50),
-                             ])
-                         }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        view.backgroundColor = .white
-        setUpSubviews()
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+            ])
+        }
 
 }
