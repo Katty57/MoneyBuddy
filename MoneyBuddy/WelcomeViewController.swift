@@ -8,6 +8,13 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
+    
+    private lazy var logoImageView: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "turtle")
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
         
         private lazy var welcomeLabel: UILabel = {
             let label = UILabel()
@@ -37,19 +44,26 @@ class WelcomeViewController: UIViewController {
         }()
     
     @objc func showSecondPage() {
-        let vc = ViewController()
+        let vc = WelcomeSecondViewController()
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: false, completion: nil)
     }
 
         func setUpSubviews (){
-                view.addSubview(welcomeLabel)
+            view.addSubview(logoImageView)
+            view.addSubview(welcomeLabel)
             view.addSubview(nextButton)
              
             NSLayoutConstraint.activate([
-                welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 278),
+                logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 177),
+                logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//                logoImageView.widthAnchor.constraint(equalToConstant: 149),
+//                logoImageView.heightAnchor.constraint(equalToConstant: 103),
+                
+                welcomeLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 10),
                 welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
                 welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+                
                 nextButton.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 73),
                 nextButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 98),
                 nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -98),

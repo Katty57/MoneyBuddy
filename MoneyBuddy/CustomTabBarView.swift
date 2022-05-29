@@ -39,6 +39,13 @@ class CustomTabBArView: UITabBarController {
         shopVC.tabBarItem = shopBarItem
         let shopNavController = UINavigationController(rootViewController: shopVC)
         
-        setViewControllers([homeNavController, goalNavController, shopNavController, profileNavController], animated: true)
+        let reportVC = ReportViewController()
+        let reportBarItem = UITabBarItem()
+        reportBarItem.image = UIImage(named: "report")
+        reportBarItem.title = "Отчет"
+        reportVC.tabBarItem = reportBarItem
+        let reportNavController = UINavigationController(rootViewController: reportVC)
+        
+        setViewControllers([homeNavController, goalNavController, shopNavController, reportNavController, profileNavController], animated: true)
     }
 }

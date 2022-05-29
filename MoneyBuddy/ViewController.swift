@@ -136,10 +136,10 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             iconImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 114),
             iconImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            iconImageView.widthAnchor.constraint(equalToConstant: 148),
-            iconImageView.heightAnchor.constraint(equalToConstant: 129),
+//            iconImageView.widthAnchor.constraint(equalToConstant: 148),
+//            iconImageView.heightAnchor.constraint(equalToConstant: 129),
             
-            welcomeLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 30),
+            welcomeLabel.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 10),
             welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 25),
             welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -25),
             

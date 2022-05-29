@@ -70,7 +70,7 @@ class RegistrationViewController: UIViewController {
     }
     
     @objc func showHomePage(_ sender: UIButton) {
-        let tabBar = CustomTabBArView()
+        let tabBar = SingedInViewController()
         tabBar.modalPresentationStyle = .fullScreen
         self.present(tabBar, animated: true, completion: nil)
     }

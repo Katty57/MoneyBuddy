@@ -12,7 +12,7 @@ class WelcomeSecondViewController: UIViewController {
         private lazy var welcomeLabel: UILabel = {
             let label = UILabel()
             label.text = """
-                Introduction speech
+                Я полезен тем, что научу тебя правильно распоряжаться финансами и зарабатывать своими достижениями
                 """
             label.textColor = .black
             label.numberOfLines = 0
